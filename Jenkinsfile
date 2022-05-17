@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "techhubb/my-jenkinsdocker-website"
+    imagename = "yaminidevik/jenkins-docker pipeline"
     registryCredential = 'dockerCredentials'
     dockerImage = ''
   }
@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/YAMINI4765/req2-finalproject', branch: 'master'])
+        git([url:'https://github.com/YAMINI4765/req2-finalproject', branch: 'master'])
 
       }
     }
