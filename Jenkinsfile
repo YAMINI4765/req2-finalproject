@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "yaminidevik/jenkins-docker pipeline"
+    imagename = "yaminidevik/jenkins-pipeline-website"
     registryCredential = 'dockerCredentials'
     dockerImage = ''
   }
