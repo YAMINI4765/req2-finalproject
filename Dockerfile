@@ -2,9 +2,9 @@
 FROM httpd:2.4
 COPY [^\.]* /usr/local/apache2/htdocs/
 
-#WORKDIR /app
+WORKDIR /app
 # We copy just the requirements.txt first to leverage Docker cache
-#COPY ./requirements.txt .
+COPY ./requirements.txt .
 
 #ENV DB_URL=DummyURL
 #ENV ACCESS_KEY=DummyURL
