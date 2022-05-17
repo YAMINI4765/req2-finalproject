@@ -1,7 +1,7 @@
 pipeline {
   environment {
-    imagename = "yaminidevik/myjenkins-pipeline-website"
-    registryCredential = 'dockerCredentials'
+    imagename = "yaminidevik/my-jenkinspipeline-website"
+    registryCredential = 'dockercredentials'
     dockerImage = ''
   }
   agent any
@@ -33,8 +33,7 @@ pipeline {
     stage('Remove Unused docker image') {
       steps{
         sh "docker rmi $imagename:$BUILD_NUMBER"
-         sh "docker rmi $imagename:latest"
-
+     
       }
     }
   }
